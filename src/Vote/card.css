@@ -1,0 +1,84 @@
+.card {
+
+    width: 35%;
+    height: 500px;
+    margin-bottom: 20px; 
+    background: #fff;
+    border: 3px solid #11045a;
+    border-radius: 0.75rem;
+    box-shadow: 0 5px 15px rgba(0,0,0,.2);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    padding: 0 0 1.5rem;
+    position: relative;
+    text-align: center;
+    transition: -webkit-transform .15s linear;
+    transition: transform .15s linear;
+    transition: transform .15s
+
+  }
+  
+  .card img {
+    /* max-width: 80%;
+    height: 50;
+    border-radius: 4px;
+    margin-bottom: 8px; */
+    background-color: #11045a;
+    border-bottom: 4px double #11045a;
+    border-top-left-radius: 0.75rem;
+    border-top-left-radius: 0.75rem ;
+    border-top-right-radius: 0.75rem;
+    border-top-right-radius: 0.75rem;
+    margin-bottom: 0.75rem;
+    object-fit: cover;
+    width: 300px;
+    height: 300px;
+  }
+  
+  .card h4 {
+    margin-bottom: 8px;
+  }
+  
+  .card h3 {
+    margin-top: 8px;
+  }
+  
+  .card .btn {
+    padding: 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin: auto;
+    display: inline-block;
+    justify-content: center;    
+  }
+  
+  .card .btn-vote {
+    background: #4CAF50;
+    color: white;
+
+  }
+  
+  .card .btn-sure {
+    background: #4CAF50;
+    color: white;
+    margin-right: 8px;
+
+  }
+  
+  .card .btn-cancel {
+    background: #e74c3c;
+    color: white;
+    justify-content: space-around;
+
+  }
+  
+  .card .btn-change {
+    background: #3498db;
+    color: white;
+  }
+  
+  .card .currently-vote-container {
+    margin-top: 8px;
+    display: flex;
+    justify-content: space-around;
+  }
+  
