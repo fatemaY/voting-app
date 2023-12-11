@@ -84,7 +84,7 @@
   /* Adjust styles for smaller screens, e.g., iPhones */
 @media screen and (max-width: 768px) {
   .card {
-    width: 100%; /* Full width on smaller screens */
+    width: 80%; /* Full width on smaller screens */
   }
 
   .card img {

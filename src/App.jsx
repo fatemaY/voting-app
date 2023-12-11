@@ -24,7 +24,6 @@ const votesLocalData = VoteData;
 
 
 function App() {
-
   const [loggedUser, setLoggedUser] = useState(userInfo);
   const [currentPage, setCurrentPage] = useState(
     userInfo.id === "" ? login : vote

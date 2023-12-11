@@ -1,6 +1,6 @@
 
 import './style.css'
-const FormRow = ({ type, name, value, handleChange, labelText, error }) => {
+const Form = ({ type, name, value, handleChange, labelText, error }) => {
   return (
     <div className='form-row'>
       <label htmlFor={name} className='form-label'>
@@ -17,4 +17,4 @@ const FormRow = ({ type, name, value, handleChange, labelText, error }) => {
     </div>
   );
 };
-export default FormRow;
+export default Form;

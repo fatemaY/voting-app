@@ -14,7 +14,7 @@ const Navbar = ({ user, setUser, setCurrentPage }) => {
   const [isLoading, setIsLoading] = useState(false);
 
   useEffect(() => {
-    const closeNavbar = (event) => {
+    const closeNavbar = () => {
       if (!showLogout) {
         return;
       }
@@ -22,7 +22,7 @@ const Navbar = ({ user, setUser, setCurrentPage }) => {
       
     };
 
-    document.body.addEventListener("click", closeNavbar);
+    // document.body.addEventListener("click", closeNavbar);
 
     return () => {
       document.body.removeEventListener("click", closeNavbar);
