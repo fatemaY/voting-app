@@ -1,7 +1,6 @@
 import './App.css'
 import UserData from './Data/userData'
 import Login from './Login/Login';
-// import LoginMain from './Login/LoginMain'
 import VoteData from "./Data/VoteData";
 import PAGES from './Data/pages';
 import { useEffect, useState } from 'react';
@@ -19,13 +18,13 @@ const EMPTY_USER = {
   role: "user",
 };
 const userInfo = JSON.parse(localStorage.getItem("loggedUser")) || EMPTY_USER;
-// const [vote, login, admin] = PAGES;
 const [vote, login, admin] = PAGES;
 const votesLocalData = VoteData;
 
 
 
 function App() {
+
   const [loggedUser, setLoggedUser] = useState(userInfo);
   const [currentPage, setCurrentPage] = useState(
     userInfo.id === "" ? login : vote
@@ -81,21 +80,6 @@ function App() {
 
 
       </div>
-    {/* {/* <ul>
-        {userData.map((item) => (
-          <li key={item.id}>
-            {item.name}{' '}
-            
-          </li>
-        ))}
-      </ul> */}
-       {/* <Login
-          usersData={userData[0]}
-          setLoggedUser={setLoggedUser}
-          setCurrentPage={setCurrentPage}
-        /> */}
-
-      {/* <LoginMain /> */}
     </>
   )
 }
