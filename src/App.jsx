@@ -44,7 +44,7 @@ function App() {
     }
   }, [loggedUser]);
 
-  const database = UserData();
+  const database = <UserData />;
   const isCurrentPage = (page) => page === currentPage;
 
 
