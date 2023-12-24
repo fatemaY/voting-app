@@ -27,7 +27,7 @@ const votesLocalData = VoteData;
 
 
 function App() {
-  const [data, setData] = useState([])
+  const [data, setData] = useState()
   useEffect(()=>{
     fetchData()
   },[])
