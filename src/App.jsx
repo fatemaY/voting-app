@@ -1,5 +1,4 @@
 import './App.css'
-import UserData from './Data/UserData'
 import Login from './Login/Login';
 import VoteData from "./Data/VoteData";
 import PAGES from './Data/pages';
@@ -7,6 +6,10 @@ import { useEffect, useState } from 'react';
 import Vote from './Vote/Vote';
 import Navbar from './Navbar/Navbar';
 import Admin from './Admin/Admin';
+
+import axios from "./instance/axiosConfig"
+
+
 
 
 
@@ -24,6 +27,25 @@ const votesLocalData = VoteData;
 
 
 function App() {
+  const [data, setData] = useState([])
+  useEffect(()=>{
+    fetchData()
+  },[])
+  const fetchData = async()=>{
+    try {
+      const response = await axios.get('/users')
+
+    setTimeout(()=>{
+      setData(response.data);
+    },2000)
+    } catch (error) {
+      console.log(error.message)
+    }
+  }
+
+
+
+
   const [loggedUser, setLoggedUser] = useState(userInfo);
   const [currentPage, setCurrentPage] = useState(
     userInfo.id === "" ? login : vote
@@ -44,7 +66,8 @@ function App() {
     }
   }, [loggedUser]);
 
-  const database = <UserData />;
+  
+  const database = data;
   const isCurrentPage = (page) => page === currentPage;
 
 
